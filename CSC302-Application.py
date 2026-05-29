@@ -99,13 +99,11 @@ tab_view, tab_add, tab_update, tab_delete = st.tabs(["🔍 View Data", "➕ Add 
 
 # View data from the selected table
 with tab_view:
-    st.write(f"Viewing data from {selected_table}")
     data = fetch_table_data(selected_table)
     st.dataframe(data, use_container_width=True, hide_index=True)         
 
 # Add entry to the selected table (placeholder)
 with tab_add:
-    st.write(f"Add a new entry to {selected_table}")
     id_col = data.columns[0]
     with st.form("new_entry_form"):
         new_data_dict = {}
@@ -120,7 +118,6 @@ with tab_add:
                 st.success("Record added successfully!")
 
 with tab_update:
-    st.write(f"Update entries in {selected_table}")
     id_col = data.columns[0] 
     record_id = st.number_input(f"Enter the {id_col} to update:", step=1, value=1)
     current_df = fetch_table_data(selected_table)
@@ -146,7 +143,6 @@ with tab_update:
 
 # Delete entries from the selected table
 with tab_delete:
-    st.write(f"Delete entries from {selected_table}")
     id_column_name = data.columns[0]
     st.info(f"Using identifier column: **{id_column_name}**")
     record_id = st.number_input("Enter the numeric ID of the record to delete:", step=1, value=0)
