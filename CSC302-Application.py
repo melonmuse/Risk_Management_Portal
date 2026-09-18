@@ -5,13 +5,7 @@ import numpy as np
 import datetime
 
 def get_connection():
-    return psycopg2.connect(
-        host="localhost",          
-        database="CSC302_Databases",     
-        user="postgres",           
-        password="Abeer2204",      
-        port="5432"                
-    )
+    return psycopg2.connect(**st.secrets["postgres"])
 
 def fetch_table_data(table_name):
     try:
