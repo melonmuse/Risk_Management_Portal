@@ -3,7 +3,10 @@
 **A PostgreSQL database with 17 tables for cybersecurity risk management, and a Streamlit web portal for managing every table without writing SQL.**
 
 
-https://github.com/user-attachments/assets/d7e71fbf-9b08-4b1e-a245-b667b36ab31d
+
+https://github.com/user-attachments/assets/dc531d85-9e7b-4ef2-8e86-323c412705a5
+
+
 
 
 
